@@ -1,4 +1,6 @@
 <?php 
+require_once("../../config/database/db.php");
+session_start();
 	if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -11,24 +13,35 @@
     $row = $result->fetch_assoc();  
 
     // get information from database
+    $db_id = $row['id'];
     $db_name = $row['username'];
     $db_pass = $row['password'];
+    $db_admin = $row['admin'];
+    $db_active=$row['active'];
     
 
     if (!empty($db_name)) {
         if (hash_equals($db_pass, crypt($password, $db_pass))) {
-            $_SESSION['user_name'] = $db_name;
-            $_SESSION['user_email'] = $db_email;
-            $url = $_SESSION['url'];
-            echo "<script>window.location = '$url'</script>";
-            
+            $_SESSION['id']  = $db_id;
+            $_SESSION['username'] = $db_name;
+            $_SESSION['admin'] = $db_admin;
+            if($db_active){
+          echo "<script>window.location = '../../resources/views/home'</script>";
+            }else {
+                echo "<script>alert('You are an inactive User');
+                window.location='../../resources/views/home/logout.php';</script>";
+
+            }
         }else{
-            echo "<script>alert('Incorrect password')</script>";
+            echo "<script>alert('Incorrect password');
+            window.location='../../resources/views/login.php';</script>";
            
         }
 
     }else{
-        echo "<script>alert('this account does not exist');</script>";
+        echo "<script>alert('this account does not exist');
+            window.location='../../resources/views/login.php';
+        </script>";
     }
    }
    ?>

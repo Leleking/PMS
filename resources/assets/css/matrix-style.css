@@ -24,7 +24,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .btn, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{ box-shadow:none;}
 .progress, .progress-success .bar, .progress .bar-success, .progress-warning .bar, .progress .bar-warning, .progress-danger .bar, .progress .bar-danger, .progress-info .bar, .progress .bar-info, .btn, .btn-primary{background-image:none;}
 .accordion-heading h5{ width:70%; }
-.form-horizontal .form-actions{ padding-left:20px; }
+
 #footer{ padding:10px; text-align:center;}
 hr{ border-top-color:#dadada;}
 .carousel{ margin-bottom:0px;}
@@ -1114,38 +1114,9 @@ div.dataTables_wrapper .ui-widget-header {
 	cursor: pointer;
 	color: #777777;
 }
-/* Forms */
-form {
-	margin-bottom: 0;
-}
-.form-horizontal .control-group {
-	border-top: 1px solid #ffffff;
-	border-bottom: 1px solid #eeeeee;
-	margin-bottom: 0;
-}
-.form-horizontal .control-group:last-child {
-	border-bottom: 0;
-}
-.form-horizontal .control-label {
-	padding-top: 15px;
-	width: 180px;
-}
-.form-horizontal .controls {
-	margin-left: 200px;
-	padding: 10px 0;
-}
-.form-horizontal input[type=text], .form-horizontal input[type=password], .form-horizontal textarea {
-}
-.row-fluid .span20 {
-	width:97.8%
-}
-.form-horizontal .form-actions {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-.help-block, .help-inline {
-	color: #999999;
-}
+
+
+
 /***********light-box***************/
 #lightbox {
 	position:fixed; /* keeps the lightbox window in the current viewport */
@@ -1422,16 +1393,6 @@ form {
 	width: 11px;
 	white-space: nowrap;
 	overflow: hidden;
-}
-.form-horizontal .control-label {
-	padding-left: 30px;
-}
-.form-horizontal .controls {
-	margin-left: 0;
-	padding: 10px 30px;
-}
-.form-actions {
-	text-align: center;
 }
 .panel-right2 {
 	width: 100%;
