@@ -66,7 +66,7 @@ $data = [
         throw new \Exception( 'Execute failed: ' . PHP_EOL . $stmt->error );
 		$stmt->close();
 		printf ("New Record Added");
-		echo "<script>window.location='../../resources/views/inmates/profile.php?id=".$inmate_id."';</script>";
+		echo "<script>window.location='../../views/inmates/profile.php?id=".$inmate_id."';</script>";
  	}
  	else 
  	{
