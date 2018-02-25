@@ -49,7 +49,6 @@ require_once("../../../config/database/db.php");
               
               </tbody>
             </table>
-            <div id="sum">nothign</div>
           </div>
         </div>
 
@@ -77,7 +76,7 @@ require_once("../../../config/database/db.php");
 			},
 			success : function(data){
                 $('#msg'+userid).html(data);
-                
+
 
 			},
 			
